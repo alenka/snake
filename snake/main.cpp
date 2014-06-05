@@ -1,5 +1,6 @@
 #include <time.h>
 #include <stdlib.h>
+#include <math.h>
 
 #ifdef __APPLE__
 #include <GLUT/glut.h>
@@ -55,10 +56,43 @@ void Tick() //изменение головного элемента
 
 //перемещение головы
     
-    if (dir==0) s[0].y+=1;
-    if (dir==1) s[0].x-=1;
-    if (dir==2) s[0].x+=1;
-    if (dir==3) s[0].y-=1;
+    int a=0;
+    int b=0;
+//ходит по 90 градусов
+/*  for (int i=0;i<1;i++)
+    {
+    while (a==0 && b==0){
+        a=m[i].x-s[0].x;
+        b=m[i].y-s[0].y;
+        if(a>0) s[0].x+=1;
+        else if (b>0) s[0].y+=1;
+        else if (a<0) s[0].x-=1;
+        else if (b<0) s[0].y-=1;
+       
+    }
+    }
+*/
+ for (int i=0;i<1;i++)
+    {do {
+        b=m[i].y-s[0].y;
+        if(b>0) s[0].y+=1;
+        else s[0].y-=1;
+    }while (b==0);
+    }
+
+
+    for (int i=0;i<1;i++)
+    {while (a==0){
+        a=m[i].x-s[0].x;
+        if(a>0) s[0].x+=1;
+        else s[0].x-=1;
+    }
+    }
+
+    //if (dir==0) s[0].y+=1;
+    //if (dir==1) s[0].x-=1;
+    //if (dir==2) s[0].x+=1;
+    //if (dir==3) s[0].y-=1;
 
 //проверка наложения координат яблока и головы
     for (int i=0;i<1;i++)
@@ -107,15 +141,19 @@ void display() {
         m[i].DrawApple();
     
     glFlush(); //вывод на экран
-    glutSwapBuffers();
+   // glutSwapBuffers();
 }
+
 
 void KeyboardEvent(int key, int a, int b) //управление змейкой
 {
     switch(key)
     {
+        case 27:
+			exit(0); // выход из приложения по нажатию ESC
+			break;
         case 101 : 	dir=0; break;
-        case 102:   dir=2; break;
+        case 102 :  dir=2; break;
         case 100 :  dir=1; break;
         case 103 :  dir=3; break;
     }
@@ -127,7 +165,7 @@ void timer(int = 0)
     
     Tick();
     
-    glutTimerFunc(300,timer,0);
+    glutTimerFunc(200,timer,0);
 }
 
 int main(int argc, char **argv) {
@@ -152,7 +190,7 @@ int main(int argc, char **argv) {
     
     glutDisplayFunc (display);
     glutSpecialFunc(KeyboardEvent);
-    glutTimerFunc(300,timer,0); //обявление таймера
+    glutTimerFunc(200,timer,0); //обявление таймера
     
     glutMainLoop(); //основной цикл программы
 }
