@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		48A6C40C193F41F600B6FE8E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48A6C40B193F41F600B6FE8E /* main.cpp */; };
-		48A6C40E193F41F600B6FE8E /* snake.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48A6C40D193F41F600B6FE8E /* snake.1 */; };
 		48A6C415193F429D00B6FE8E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A6C414193F429D00B6FE8E /* OpenGL.framework */; };
 		48A6C417193F42B700B6FE8E /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A6C416193F42B700B6FE8E /* GLUT.framework */; };
 		48A6C419193F42BE00B6FE8E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A6C418193F42BE00B6FE8E /* Cocoa.framework */; };
@@ -21,7 +20,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				48A6C40E193F41F600B6FE8E /* snake.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -30,7 +28,6 @@
 /* Begin PBXFileReference section */
 		48A6C408193F41F600B6FE8E /* snake */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = snake; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A6C40B193F41F600B6FE8E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		48A6C40D193F41F600B6FE8E /* snake.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = snake.1; sourceTree = "<group>"; };
 		48A6C414193F429D00B6FE8E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		48A6C416193F42B700B6FE8E /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		48A6C418193F42BE00B6FE8E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -73,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				48A6C40B193F41F600B6FE8E /* main.cpp */,
-				48A6C40D193F41F600B6FE8E /* snake.1 */,
 			);
 			path = snake;
 			sourceTree = "<group>";
@@ -239,6 +235,7 @@
 				48A6C413193F41F600B6FE8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
